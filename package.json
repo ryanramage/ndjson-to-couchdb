@@ -1,0 +1,31 @@
+{
+  "name": "ndjson-to-couchdb",
+  "version": "1.0.0",
+  "description": "Stream ndjson to couchdb",
+  "bin": "bin/cli.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanramage/ndjson-to-couchdb"
+  },
+  "keywords": [
+    "ndjson",
+    "couchdb"
+  ],
+  "author": "Ryan Ramage",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanramage/ndjson-to-couchdb/issues"
+  },
+  "homepage": "https://github.com/ryanramage/ndjson-to-couchdb",
+  "dependencies": {
+    "couchr": "0.0.16",
+    "ndjson": "^1.3.0",
+    "rc": "^1.0.3",
+    "request": "^2.57.0",
+    "through2": "^2.0.0"
+  }
+}
