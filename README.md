@@ -16,5 +16,6 @@ Usage
 Options
 -------
 
-  - --force  if there is an existing doc with the same _id fetch the existing _rev and overwrite the doc.
+  - --force=true  if there is an existing doc with the same _id fetch the existing _rev and overwrite the doc.
+  - --key=keyname the name of the field to use to set the primary key value.
   - --prev_rev_fiel=prev_rev add a field to the emitted doc with name 'prev_rev' that will hold the last _rev before the update
