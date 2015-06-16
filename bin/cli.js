@@ -6,7 +6,8 @@ var config = require('rc')('ndjson-to-couchdb', {
   url: undefined,
   key: undefined,
   force: false,
-  prev_rev_field: undefined
+  prev_rev_field: undefined,
+  copy_fields_from_prev_rev: undefined
 })
 
 if (!config.url && config._[0]) {
