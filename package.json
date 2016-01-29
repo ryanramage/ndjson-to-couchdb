@@ -1,6 +1,6 @@
 {
   "name": "ndjson-to-couchdb",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "Stream ndjson to couchdb",
   "bin": "bin/cli.js",
   "main": "lib/index.js",
