@@ -8,7 +8,8 @@ var config = require('rc')('ndjson-to-couchdb', {
   force: false,
   swallowErrors: false,
   prev_rev_field: undefined,
-  copy_fields_from_prev_rev: undefined
+  copy_fields_from_prev_rev: undefined,
+  urlTemplate: false
 })
 
 if (!config.url && config._[0]) {
