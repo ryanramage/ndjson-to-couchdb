@@ -1,6 +1,6 @@
 {
   "name": "ndjson-to-couchdb",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "Stream ndjson to couchdb",
   "bin": "bin/cli.js",
   "main": "lib/index.js",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ryanramage/ndjson-to-couchdb",
   "dependencies": {
+    "async": "^2.0.0-rc.1",
     "couchr": "0.0.16",
     "lodash.template": "^4.2.0",
     "ndjson": "^1.3.0",

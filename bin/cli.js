@@ -9,7 +9,9 @@ var config = require('rc')('ndjson-to-couchdb', {
   swallowErrors: false,
   prev_rev_field: undefined,
   copy_fields_from_prev_rev: undefined,
-  urlTemplate: false
+  urlTemplate: false,
+  retryTimes: 1,
+  retryInterval: 100
 })
 
 if (!config.url && config._[0]) {
