@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-var ndjson = require('ndjson');
-var through = require('through2');
+const ndjson = require('hyper-ndjson')
 
 var config = require('rc')('ndjson-to-couchdb', {
   url: undefined,
@@ -11,7 +10,8 @@ var config = require('rc')('ndjson-to-couchdb', {
   copy_fields_from_prev_rev: undefined,
   urlTemplate: false,
   retryTimes: 1,
-  retryInterval: 100
+  retryInterval: 100,
+  concurrency: 1
 })
 
 if (!config.url && config._[0]) {
@@ -22,11 +22,8 @@ if (!config.key && config._[1]) {
   config.key = config._[1];
 }
 
-var to_couch = require('../lib');
+const worker = require('../lib/worker')
 
-
-process.stdin
-  .pipe(ndjson.parse())
-  .pipe(to_couch(config))
-  .pipe(ndjson.stringify())
-  .pipe(process.stdout)
+ndjson(config, process.stdin, process.stdout, worker, function () {
+  process.exit()
+})
